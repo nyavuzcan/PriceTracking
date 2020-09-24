@@ -17,18 +17,20 @@ public class PriceTrackOperationsUtility {
       e.printStackTrace();
     }
     String price = null;
+    String name = null;
 
     try {
       Element element = document.getElementsByClass("product-price-wrapper").get(0);
 
       price = element.getElementsByClass("extra-price").get(0).getElementsByTag("span").get(3).text();
+      name = element.getElementsByClass("hide-title").get(0).getElementsByTag("span").get(1).text();
 
 
     } catch (Exception e) {
       e.printStackTrace();
     }
 
-    if (Objects.nonNull(price))
+    if(Objects.nonNull(price) && Objects.nonNull(name))
       return price;
 
     return null;

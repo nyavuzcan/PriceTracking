@@ -3,6 +3,7 @@ package com.pricetracking.ny.dto;
 public class PriceTrackResponse {
   private String price;
   private String message;
+  private String name;
 
   public PriceTrackResponse() {
   }
@@ -11,9 +12,10 @@ public class PriceTrackResponse {
     this.message = message;
   }
 
-  public PriceTrackResponse(String price, String message) {
+  public PriceTrackResponse(String price, String message, String name) {
     this.price = price;
     this.message = message;
+    this.name = name;
   }
 
   public String getPrice() {
@@ -31,4 +33,13 @@ public class PriceTrackResponse {
   public void setMessage(String message) {
     this.message = message;
   }
+
+  public String getName() {
+    return name;
+  }
+
+  public void setName(String name) {
+    this.name = name;
+  }
+
 }
