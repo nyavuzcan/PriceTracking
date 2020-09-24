@@ -3,6 +3,7 @@ package com.pricetracking.ny.dto;
 public class PriceTrackResponse {
   private String price;
   private String message;
+  private String test;
 
   public PriceTrackResponse() {
   }
