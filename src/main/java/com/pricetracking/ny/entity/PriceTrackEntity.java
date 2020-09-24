@@ -15,6 +15,7 @@ public class PriceTrackEntity {
   private String productPrice;
   private String priceDate;
   private String productWebsite;
+  private String productName;
 
   @Id
   @Column(name = "id")
@@ -70,4 +71,9 @@ public class PriceTrackEntity {
   public void setProductWebsite(String productWebSite) {
     this.productWebsite = productWebSite;
   }
+
+  @Column(name="product_name")
+  public String getProductName() {return productName; }
+
+  public void setProductName(String productName){ this.productName = productName; }
 }
