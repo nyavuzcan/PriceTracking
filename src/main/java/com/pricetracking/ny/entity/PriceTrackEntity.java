@@ -1,9 +1,6 @@
 package com.pricetracking.ny.entity;
 
-import javax.persistence.Column;
-import javax.persistence.Entity;
-import javax.persistence.Id;
-import javax.persistence.Table;
+import javax.persistence.*;
 
 @Entity
 @Table(name = "price_track")
@@ -17,7 +14,7 @@ public class PriceTrackEntity {
   private String productWebsite;
 
   @Id
-  @Column(name = "id")
+  @GeneratedValue(strategy = GenerationType.AUTO)
   public Long getId() {
     return id;
   }
