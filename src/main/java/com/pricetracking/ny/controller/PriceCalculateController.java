@@ -21,7 +21,6 @@ public class PriceCalculateController {
   @RequestMapping(value = "/track", method = RequestMethod.POST, produces = MediaType.APPLICATION_JSON_VALUE,
       consumes = MediaType.APPLICATION_JSON_VALUE)
   ResponseEntity<PriceTrackResponse> generateAlertPriceTrack(@RequestBody UrlRequest urlRequest) {
-
     return new ResponseEntity<>(priceTrackService.generateAlertPriceTrack(urlRequest), HttpStatus.OK);
 
   }
